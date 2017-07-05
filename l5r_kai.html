@@ -1,0 +1,322 @@
+<div class="container">
+
+<input class="tab-button core" type="radio" name="attr_tab" value="core" checked="checked"><span>CORE</span>
+<input class="tab-button bio" type="radio" name="attr_tab" value="bio"><span>BIO</span>
+<input class="tab-button bushi" type="radio" name="attr_tab" value="bushi"><span>BUSHI/COURTIER</span>
+<input class="tab-button shugenja" type="radio" name="attr_tab" value="shugenja"><span>SHUGENJA</span>
+<input class="tab-button monk" type="radio" name="attr_tab" value="monk"><span>MONK</span>
+
+<div class="header">
+    
+        <img src="https://s20.postimg.org/6g7tqk8r1/logo_l5r.png">
+        
+                <div class="header-info">
+                    
+                    <div class="top">
+                        
+                        <div class="hlabel-container">
+                            <input type="text" class="class-name" name="attr_charName" value="Character name" />
+                            <span class="label">NAME</span>
+                        </div>
+                        
+                        <div class="hlabel-container">
+                            <input type="number" class="class-rank" name="attr_charRank" value="1"/>
+                            <span class="label">RANK</span>
+                        </div>
+                        
+                    </div>
+                        
+                    <div class="mid">
+                    
+                        <div class="hlabel-container">
+                            <input type="text" class="class-name" name="attr_charClan" value="Clan" />
+                            <span class="label">CLAN</span>
+                        </div>
+                        
+                        <div class="hlabel-container">
+                            <input type="number" class="class-rank" name="attr_charInsight" value="120"/>
+                            <span class="label">INSIGHT</span>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="bot">
+                    
+                        <div class="hlabel-container">
+                            <input type="text" class="class-name" name="attr_charSchool_0" value="School" />
+                            <span class="label">SCHOOL</span>
+                        </div>
+                        
+                        <div class="hlabel-container">
+                            <input type="number" class="class-rank" name="attr_charXP" value="100"/>
+                            <span class="label">XP</span>
+                        </div>
+                    
+                    </div>
+                </div>
+</div>
+
+<div class="page core">
+    
+    <div class="body">
+        
+        <div class="col-1">
+                <div class="ring-attr-container">
+                    
+                    <!-- AIR RING -->
+                    
+                    <div class="ring-attr-border">
+                    
+                        <div class="ring-container">
+                            <button type="roll" name="roll_ringAir" value="/roll [[@{ringAir}]]d10">AIR</button>
+                            <input class="ring" type="text" name="attr_ringAir" value="((@{reflexes} + @{awareness}) - abs(@{reflexes} - @{awareness})) / 2" disabled="true"/>
+                        </div>
+                    
+                        <table>
+                            <tr>
+                                <td><span class="attr-container"><button type="roll" value="/roll @{reflexes}d10">Reflexes</button></span></td>
+                                <td><span><input type="number" value="2" name="attr_reflexes"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="attr-container"><button type="roll" value="/roll @{awareness}d10">Awareness</button></span></td>
+                                <td><span><input type="number" value="2" name="attr_awareness"></span></td>
+                            </tr>
+                        </table>
+                    
+                    </div>
+                    
+                    <!-- EARTH RING -->
+
+                    <div class="ring-attr-border">
+                    
+                        <div class="ring-container">
+                            <button type="roll" name="roll_ringEarth" value="/roll [[@{ringEarth}]]d10">EARTH</button>
+                            <input class="ring" type="text" name="attr_ringEarth" value="((@{stamina} + @{willpower}) - abs(@{stamina} - @{willpower})) / 2" disabled="true"/>
+                        </div>
+                    
+                        <table>
+                            <tr>
+                                <td><span class="attr-container"><button type="roll" value="/roll @{stamina}d10">Stamina</button></span></td>
+                                <td><span><input type="number" value="2" name="attr_stamina"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="attr-container"><button type="roll" value="/roll @{willpower}d10">Willpower</button></span></td>
+                                <td><span><input type="number" value="2" name="attr_willpower"></span></td>
+                            </tr>
+                        </table>
+                    
+                    </div>
+
+                    <!-- FIRE RING -->
+
+                    <div class="ring-attr-border">
+                    
+                        <div class="ring-container">
+                            <button type="roll" name="roll_ringFire" value="/roll [[@{ringFire}]]d10">FIRE</button>
+                            <input class="ring" type="text" name="attr_ringFire" value="((@{agility} + @{intelligence}) - abs(@{agility} - @{intelligence})) / 2" disabled="true"/>
+                        </div>
+                    
+                        <table>
+                            <tr>
+                                <td><span class="attr-container"><button type="roll" value="/roll @{agility}d10">Agility</button></span></td>
+                                <td><span><input type="number" value="2" name="attr_agility"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="attr-container"><button type="roll" value="/roll @{intelligence}d10">Intelligence</button></span></td>
+                                <td><span><input type="number" value="2" name="attr_intelligence"></span></td>
+                            </tr>
+                        </table>
+                    
+                    </div>
+
+                    <!-- WATER RING -->
+
+                    <div class="ring-attr-border">
+                    
+                        <div class="ring-container">
+                            <button type="roll" name="roll_ringWater" value="/roll [[@{ringWater}]]d10">WATER</button>
+                            <input class="ring" type="text" name="attr_ringWater" value="((@{strength} + @{perception}) - abs(@{strength} - @{perception})) / 2" disabled="true"/>
+                        </div>
+                    
+                        <table>
+                            <tr>
+                                <td><span class="attr-container"><button type="roll" value="/roll @{strength}d10">Strenght</button></span></td>
+                                <td><span><input type="number" value="2" name="attr_strength"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="attr-container"><button type="roll" value="/roll @{perception}d10">Perception</button></span></td>
+                                <td><span><input type="number" value="2" name="attr_perception"></span></td>
+                            </tr>
+                        </table>
+                    
+                    </div>
+
+                    <!-- VOID RING -->
+
+                    <div class="ring-attr-border-void">
+                    
+                        <div class="ring-container">
+                            <button type="roll" name="roll_ringVoid" value="/roll [[@{ringVoid}]]d10">VOID</button>
+                            <input class="ring" type="text" name="attr_ringVoid" value="2"/>
+                        </div>
+                    
+                        <div class="void-counter">
+                            
+                            <div class="void-counter">
+                                
+                                <input type='checkbox' name='attr_voidLvl0'>
+                                <input type='checkbox' name='attr_voidLvl1'>
+                                <input type='checkbox' name='attr_voidLvl2'>
+                                <input type='checkbox' name='attr_voidLvl3'>
+                                <input type='checkbox' name='attr_voidLvl4'>
+                            </div>
+                        
+                            <div class="void-counter">
+                                <input type='checkbox' name='attr_voidLvl5'>
+                                <input type='checkbox' name='attr_voidLvl6'>
+                                <input type='checkbox' name='attr_voidLvl7'>
+                                <input type='checkbox' name='attr_voidLvl8'>
+                                <input type='checkbox' name='attr_voidLvl9'>
+                            </div>
+                            
+                        </div>
+                    
+                    </div>
+
+                </div>
+                
+        </div>
+        
+        <div class="col-2">
+
+            <!-- SKILLS -->
+
+            <div class="skills" style="margin-bottom: 10px; min-height: 100px; position: relative;">
+                
+                <div class="top">
+                    <span class="label" style="width: 50px;">SKILL</span>
+                    <span class="label" style="width: 50px;">RANK</span>
+                    <span class="label" style="width: 50px;">TRAIT</span>
+                    <span class="label" style="width: 50px;">SUB-TYPE</span>
+                    <span class="label" style="width: 120px;">EMPHASES & MASTERY</span>
+                </div>
+                
+                 <fieldset class="repeating_skills">
+                     
+                    <div class="skill">
+                        
+                        <input class="options-flag" type="checkbox" name="attr_options-flag" checked="checked"><span>y</span>
+                        
+                        <div class="options">
+                            
+                            <div class="row">
+                                <span>SKILL:</span>
+                                <input type="text" name="attr_skillname_base" style="width: 50px;">
+                            </div>
+                            
+                            <div class="row">
+                                <span>RANK</span>
+                                <input type="number" name="attr_skillrank_base" style="width: 50px;">
+                            </div>
+                            
+                            <div class="row">
+                                <span>TRAIT:</span>
+                                <select name="attr_skilltrait_base">
+                                    <option value="@{reflexes}" selected="selected">REFLEXES</option>
+                                    <option value="@{awareness}">AWARENESS</option>
+                                    <option value="@{stamina}">STAMINA</option>
+                                    <option value="@{willpower}">WILLPOWER</option>
+                                    <option value="@{agility}">AGILITY</option>
+                                    <option value="@{intelligence}">INTELLIGENCE</option>
+                                    <option value="@{strength}">STRENGTH</option>
+                                    <option value="@{perception}">PERCEPTION</option>
+                                </select>
+                            </div>
+
+                            <div class="row">
+                                <span>SUBTYPE:</span>
+                                <input type="text" name="attr_skillsub_base" style="width: 50px;">
+                            </div>
+
+                            <div class="row">
+                                <span>EMPHASES & MASTERY:</span>
+                                <input type="text" name="attr_skillemp_base" style="width: 120px;">
+                            </div>
+
+                        </div>
+                        
+                        <div class="display">
+                            <button type="roll" name="roll_skill" value="/roll 1d10 + @{skilltrait}">
+                                <input type="text" name="attr_skillname" style="width: 80px;">
+                                <input type="text" name="attr_skillrank" style="width: 80px;">
+                                <input type="text" name="attr_skilltrait" style="width: 80px;">
+                                <input type="text" name="attr_skillsub" style="width: 80px;">
+                                <input type="text" name="attr_skillemp" style="width: 80px;">
+                            </button>
+                        </div>
+                        
+                    </div>
+                    
+                 </fieldset>
+                <div class="label" style="position: absolute; bottom: 0px; width: 100%;">
+                    <span>SKILLS</span>
+                </div>
+            </div>
+
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
